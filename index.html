@@ -1,214 +1,266 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manicura profesional y diseños exclusivos. ¡Te ayudamos a lucir unas uñas perfectas!">
-    <title>Dani Nails Studio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1>Dani Nails Studio</h1>
-            <p>El lugar perfecto para tus uñas</p>
-        </div>
-    </header>
-
-    <!-- Sección de servicios -->
-    <section id="servicios" class="servicios">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-cards">
-                <div class="service-card">
-                    <h3>Manicura Básica</h3>
-                    <p>Una manicura impecable con productos de calidad.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Diseños Personalizados</h3>
-                    <p>¡Haz que tus uñas hablen con diseños exclusivos!</p>
-                </div>
-                <div class="service-card">
-                    <h3>Pedicura</h3>
-                    <p>Relájate con una pedicura de lujo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonios">
-        <div class="container">
-            <h2>Lo que dicen nuestras clientas</h2>
-            <p>"¡Las mejores uñas que he tenido! Dani siempre sabe qué diseño elegir." - Ana G.</p>
-            <p>"Increíbles, siempre salgo feliz con el resultado. ¡100% recomendadas!" - Marta R.</p>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contacto">
-        <div class="container">
-            <h2>Agenda tu cita</h2>
-            <p>Escríbenos para más información o para reservar tu cita.</p>
-            <form action="https://formsubmit.co/tu-email" method="POST">
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo" required>
-                <textarea name="message" placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Dani Nails Studio | Todos los derechos reservados</p>
-        </div>
-    </footer>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manicura profesional y diseños exclusivos. ¡Te ayudamos a lucir unas uñas perfectas!">
-    <title>Dani Nails Studio</title>
+    <meta name="description" content="Bienvenido a Dani-Salon, el mejor salón de uñas con diseños personalizados y un ambiente relajante.">
+    <meta name="author" content="Dani Salon">
+    <title>Dani-Salon - Tu salón de uñas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ff9f80;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffef76;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .service-item {
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff9f80;
+        }
+
+        .service-item p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(90%);
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        form label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background-color: #ff9f80;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff6f5c;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ff9f80;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        #appointment-date {
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .gallery-container {
+                flex-direction: column;
+            }
+
+            .service-item {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1>Dani Nails Studio</h1>
-            <p>El lugar perfecto para tus uñas</p>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Bienvenida a Dani-Salon</h1>
+        <p>El mejor lugar para consentir tus uñas con los mejores diseños y productos de calidad.</p>
     </header>
 
-    <!-- Sección de servicios -->
-    <section id="servicios" class="servicios">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-cards">
-                <div class="service-card">
-                    <h3>Manicura Básica</h3>
-                    <p>Una manicura impecable con productos de calidad.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Diseños Personalizados</h3>
-                    <p>¡Haz que tus uñas hablen con diseños exclusivos!</p>
-                </div>
-                <div class="service-card">
-                    <h3>Pedicura</h3>
-                    <p>Relájate con una pedicura de lujo.</p>
-                </div>
-            </div>
+    <section id="services">
+        <h2>Servicios</h2>
+        <div class="service-item">
+            <h3>Manicura Clásica</h3>
+            <p>Disfruta de una manicura completa, con todo lo que necesitas para mantener tus uñas bellas y saludables.</p>
+        </div>
+        <div class="service-item">
+            <h3>Diseño de Uñas</h3>
+            <p>Haz que tus uñas sean un lienzo único con nuestros diseños artísticos y personalizados.</p>
+        </div>
+        <div class="service-item">
+            <h3>Pedicura Relajante</h3>
+            <p>Relájate con una pedicura que dejará tus pies suaves y cuidados, perfecta para terminar la semana.</p>
         </div>
     </section>
 
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonios">
-        <div class="container">
-            <h2>Lo que dicen nuestras clientas</h2>
-            <p>"¡Las mejores uñas que he tenido! Dani siempre sabe qué diseño elegir." - Ana G.</p>
-            <p>"Increíbles, siempre salgo feliz con el resultado. ¡100% recomendadas!" - Marta R.</p>
+    <section id="gallery">
+        <h2>Galería de Diseños</h2>
+        <div class="gallery-container">
+            <img src="img1.jpg" alt="Diseño de uñas 1">
+            <img src="img2.jpg" alt="Diseño de uñas 2">
+            <img src="img3.jpg" alt="Diseño de uñas 3">
         </div>
     </section>
 
-    <!-- Contacto y Calendario -->
-    <section id="contacto" class="contacto">
-        <div class="container">
-            <h2>Agenda tu cita</h2>
-            <p>Selecciona la fecha y la hora que más te convenga para tu manicura o pedicura.</p>
-            <form action="https://formsubmit.co/tu-email" method="POST">
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo" required>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna duda o quieres agendar una cita? ¡Envíanos un mensaje!</p>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required>
 
-                <!-- Calendario de fecha -->
-                <label for="date">Selecciona la fecha:</label>
-                <input type="date" id="date" name="date" required>
-                
-                <!-- Selector de hora -->
-                <label for="time">Selecciona la hora:</label>
-                <input type="time" id="time" name="time" required>
+            <label for="email">Tu correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
 
-                <textarea name="message" placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </div>
+            <label for="message">Tu mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h3>Reserva tu cita:</h3>
+        <input type="date" id="appointment-date">
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Dani Nails Studio | Todos los derechos reservados</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Dani-Salon. Todos los derechos reservados. | Desarrollado por <a href="https://github.com/Pepi1007" target="_blank">Pepi1007</a></p>
     </footer>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dani-Salon</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#gallery">Galería</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="home">
-    <h1>Bienvenidos a Dani-Salon</h1>
-    <p>El mejor lugar para lucir unas uñas hermosas.</p>
-  </section>
-
-  <section id="services">
-    <h2>Servicios</h2>
-    <div class="service">
-      <h3>Manicura</h3>
-      <p>Diseños únicos y personalizados.</p>
-    </div>
-    <div class="service">
-      <h3>Pedicura</h3>
-      <p>Relájate y cuida de tus pies.</p>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2>Galería</h2>
-    <div class="gallery">
-      <img src="img1.jpg" alt="Diseño 1">
-      <img src="img2.jpg" alt="Diseño 2">
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contáctanos</h2>
-    <p>Agenda tu cita ahora mismo.</p>
-    <button><a href="https://calendly.com/tu-enlace" target="_blank">Agendar cita</a></button>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dani-Salon</p>
-  </footer>
-</body>
-</html>
-<section class="testimonials">
-  <h2>Testimonios</h2>
-  <div class="testimonial">
-    <p>"Me encantaron mis uñas, el mejor servicio de todos!" - Ana M.</p>
-  </div>
-  <div class="testimonial">
-    <p>"¡Muy recomendado! El salón tiene un ambiente increíble." - Laura P.</p>
-  </div>
-</section>
