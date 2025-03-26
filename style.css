@@ -1,292 +1,248 @@
-/* Reset de estilos */
-* {
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f3f4f6;
     color: #333;
-    line-height: 1.6;
-    font-size: 16px;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-/* Estilos del Header */
+/* Header */
 header {
-    background: linear-gradient(135deg, #ff9f80, #ff6f5c);
+    background-color: #ffb3b3; /* Color pastel suave */
     color: #fff;
     text-align: center;
-    padding: 50px 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #ff6f5c;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    opacity: 0.8;
+    margin-top: 0.5rem;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-nav ul li a {
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffef76;
+header nav ul li a:hover {
+    color: #333;
 }
 
 /* Sección de Servicios */
 #services {
-    background: #fff;
-    padding: 60px 20px;
+    background-color: #ffdfdf;
+    padding: 3rem 1.5rem;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 60px;
 }
 
 #services h2 {
+    color: #ff6b6b;
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-    text-transform: uppercase;
-    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 .service-item {
-    background: #fff;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 10px;
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    display: inline-block;
+    width: 30%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .service-item h3 {
     font-size: 1.8rem;
-    color: #ff9f80;
-    margin-bottom: 15px;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
 }
 
 .service-item p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #555;
 }
 
-/* Galería de imágenes */
+/* Sección de Galería */
 #gallery {
-    padding: 60px 20px;
+    background-color: #e0f7fa;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
 #gallery h2 {
+    color: #4db6ac;
     font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 .gallery-container {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .gallery-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-container img:hover {
-    transform: scale(1.05);
-    filter: brightness(90%);
+/* Sección de Nosotros */
+#about {
+    background-color: #ffe0b2;
+    padding: 3rem 1.5rem;
+    text-align: center;
 }
 
-/* Sección de contacto */
+#about h2 {
+    color: #ff7043;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.chat-bubble {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 1rem;
+    width: fit-content;
+    margin: 1.5rem auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble p {
+    margin: 0;
+}
+
+/* Sección de Contacto */
 #contact {
-    background: #fff;
-    padding: 60px 20px;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: #c5e1a5;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
 #contact h2 {
+    color: #7b9b4e;
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 30px auto;
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-form label {
+#contact label {
     display: block;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
     font-size: 1.1rem;
-    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    transition: border 0.3s ease;
+    font-size: 1rem;
+    color: #555;
 }
 
-form input:focus,
-form textarea:focus {
-    border-color: #ff9f80;
-    background-color: #fff;
-}
-
-form button {
-    background-color: #ff9f80;
+#contact button {
+    background-color: #ff6b6b;
     color: white;
-    padding: 15px;
+    padding: 1rem;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #ff6f5c;
+#contact button:hover {
+    background-color: #e64946;
 }
 
-/* Sección de citas */
-#appointment-date {
-    padding: 15px;
+/* Sección de Citas */
+#appointments {
+    background-color: #fff3e0;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+#appointments h2 {
+    color: #ffb74d;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#appointments p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+#appointments input {
+    padding: 1rem;
     font-size: 1.2rem;
-    border-radius: 5px;
+    margin-right: 1rem;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    transition: border 0.3s ease;
 }
 
-#appointment-date:focus {
-    border-color: #ff9f80;
-    background-color: #fff;
+#appointments button {
+    background-color: #ff7043;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+#appointments button:hover {
+    background-color: #e64a19;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
-    padding: 20px;
+    background-color: #ffb3b3;
     text-align: center;
-    margin-top: 60px;
-    border-radius: 10px;
+    padding: 1.5rem 0;
+    color: white;
 }
 
 footer p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-footer a {
-    color: #ff9f80;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-header,
-#services,
-#gallery,
-#contact {
-    animation: fadeInUp 1.5s ease-out;
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .service-item {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .gallery-container {
-        flex-direction: column;
-    }
-
-    footer p {
-        font-size: 1rem;
-    }
+    font-size: 1rem;
+    margin: 0;
 }
