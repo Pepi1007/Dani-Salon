@@ -1,109 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dani Salon - Manicure Profesional</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Salon - Belleza & Estilo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <div class="logo">
-        <h1>Dani Salon</h1>
-      </div>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#ubicacion">Ubicación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Inicio Section -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h2>Bienvenidos a Dani Salon</h2>
-      <p>Transforma tus manos, ¡haz de tu manicura una obra de arte!</p>
-      <a href="#contacto" class="btn">Agenda tu cita</a>
-    </div>
-  </section>
-
-  <!-- Nosotros Section -->
-  <section id="nosotros" class="section">
-    <div class="section-title">
-      <h2>Nosotros</h2>
-      <p>Conoce a Dani, la experta en manicura</p>
-    </div>
-    <div class="about-content">
-      <img src="https://via.placeholder.com/400x300" alt="Dani Salon" />
-      <div class="about-text">
-        <h3>Quiénes somos</h3>
-        <p>Dani es una manicurista profesional con más de 5 años de experiencia, especializada en manicuras creativas, diseños personalizados y cuidado de uñas.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios Section -->
-  <section id="servicios" class="section">
-    <div class="section-title">
-      <h2>Servicios</h2>
-      <p>Descubre lo que ofrecemos</p>
-    </div>
-    <div class="services">
-      <div class="service">
-        <i class="fas fa-paint-brush"></i>
-        <h3>Manicura Básica</h3>
-        <p>Disfruta de una manicura limpia y elegante.</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-gem"></i>
-        <h3>Manicura con Gel</h3>
-        <p>Uñas duraderas y brillantes con gel de alta calidad.</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-heart"></i>
-        <h3>Diseños Personalizados</h3>
-        <p>Crea el diseño perfecto para ti con nuestra técnica avanzada.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ubicación Section -->
-  <section id="ubicacion" class="section">
-    <div class="section-title">
-      <h2>Ubicación</h2>
-      <p>Visítanos en nuestro salón</p>
-    </div>
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.823643238611!2d-58.44344168497257!3d-34.618677280453595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5ed6d7fbc51%3A0xf8bff56e2417a0d!2sCalle%20Falsa%20123!5e0!3m2!1ses-419!2sar!4v1612894531621!5m2!1ses-419!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- Contacto Section -->
-  <section id="contacto" class="section">
-    <div class="section-title">
-      <h2>Contacto</h2>
-      <p>¡Hablemos! Agenda tu cita hoy mismo</p>
-    </div>
-    <form class="contact-form">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea placeholder="Tu mensaje" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Dani Salon. Todos los derechos reservados.</p>
-  </footer>
-
+    <header>
+        <div class="logo">Dani Salon</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="seccion">
+        <h2>Bienvenida a Dani Salon</h2>
+        <p>Tu lugar para un cuidado profesional de uñas y estética.</p>
+        <button class="cta">Reserva Ahora</button>
+    </section>
+    
+    <section id="nosotros" class="seccion">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo apasionado por la belleza y el bienestar de nuestras clientas.</p>
+        <img src="salon.jpg" alt="Imagen del salón" class="imagen">
+    </section>
+    
+    <section id="servicios" class="seccion">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+            <div class="servicio">
+                <img src="manicura.jpg" alt="Manicura">
+                <h3>Manicura & Pedicura</h3>
+            </div>
+            <div class="servicio">
+                <img src="uñas.jpg" alt="Uñas esculpidas">
+                <h3>Uñas Esculpidas</h3>
+            </div>
+            <div class="servicio">
+                <img src="diseños.jpg" alt="Diseños personalizados">
+                <h3>Diseños Personalizados</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section id="reservas" class="seccion">
+        <h2>Reserva tu cita</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?src=tuemail%40gmail.com&ctz=America/New_York" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+    </section>
+    
+    <section id="contacto" class="seccion">
+        <h2>Contáctanos</h2>
+        <div class="contacto-info">
+            <p><strong>Teléfono:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> contacto@danisalon.com</p>
+            <p><strong>Ubicación:</strong> Calle Belleza, 123, Ciudad</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Dani Salon - Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
