@@ -1,202 +1,120 @@
-/* Estilos avanzados para Dani Salon */
-
-/* Importación de fuentes modernas */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-:root {
-  --primary-color: #ff7f50;
-  --secondary-color: #ffe4b5;
-  --background-color: #f9f9f9;
-  --text-color: #333;
-  --white: #fff;
-  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Estilos generales */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f1ff;
+    color: #333;
 }
 
-/* Navegación */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: var(--white);
-  box-shadow: var(--shadow);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
 }
 
-nav ul li {
-  display: inline;
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-/* Sección Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url('hero-image.jpg') center/cover no-repeat;
-  text-align: center;
-  padding: 50px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  color: var(--white);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: var(--white);
-}
-
-.btn-primary {
-  background: var(--primary-color);
-  color: var(--white);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #ff6347;
+nav a:hover {
+    color: #ffeb3b;
 }
 
 /* Secciones */
-section {
-  padding: 80px 50px;
-}
-
-.about, .services, .contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about img, .services img {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.text-content {
-  width: 45%;
-}
-
-.text-content h2 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-}
-
-.text-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Sección Servicios */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.service-box {
-  background: var(--white);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
-.service-box h3 {
-  color: var(--primary-color);
-}
-
-/* Formulario */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-.contact-form button {
-  align-self: start;
-}
-
-/* Footer */
-footer {
-  background: var(--primary-color);
-  text-align: center;
-  padding: 20px;
-  color: var(--white);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    padding: 20px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .about, .services {
-    flex-direction: column;
+.seccion {
+    padding: 100px 20px;
     text-align: center;
-  }
-  
-  .about img, .services img {
+}
+
+h2 {
+    font-size: 36px;
+    color: #e91e63;
+}
+
+p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Botón principal */
+.cta {
+    background: #ff4081;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background: #e91e63;
+}
+
+/* Servicios */
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 300px;
+}
+
+.servicio img {
     width: 100%;
-  }
-  
-  .text-content {
-    width: 100%;
-  }
-  
-  .services-container {
-    grid-template-columns: 1fr;
-  }
+    border-radius: 10px;
+}
+
+.servicio:hover {
+    transform: scale(1.05);
+}
+
+/* Contacto */
+.contacto-info {
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Pie de página */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
