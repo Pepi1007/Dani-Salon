@@ -1,248 +1,209 @@
-/* Estilos generales */
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background-color: #ffb3b3; /* Color pastel suave */
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+nav .logo h1 {
+  font-size: 2rem;
+  color: #ff7b00;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1rem;
+nav ul li {
+  margin: 0 20px;
 }
 
-header nav ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
-header nav ul li a:hover {
-    color: #333;
+/* HERO SECTION */
+.hero {
+  background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
 }
 
-/* Sección de Servicios */
-#services {
-    background-color: #ffdfdf;
-    padding: 3rem 1.5rem;
-    text-align: center;
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-#services h2 {
-    color: #ff6b6b;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.hero-content p {
+  font-size: 1.3rem;
+  margin: 10px 0;
 }
 
-.service-item {
-    background-color: #fff;
-    padding: 1.5rem;
-    margin: 1rem;
-    display: inline-block;
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #ff7b00;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
 }
 
-.service-item h3 {
-    font-size: 1.8rem;
-    color: #ff6b6b;
-    margin-bottom: 1rem;
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.service-item p {
-    font-size: 1.1rem;
-    color: #555;
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff7b00;
 }
 
-/* Sección de Galería */
-#gallery {
-    background-color: #e0f7fa;
-    padding: 3rem 1.5rem;
-    text-align: center;
+.section-title p {
+  font-size: 1.2rem;
+  color: #777;
 }
 
-#gallery h2 {
-    color: #4db6ac;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+/* ABOUT SECTION */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
-.gallery-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.about-content img {
+  width: 400px;
+  border-radius: 10px;
 }
 
-.gallery-container img {
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.about-text {
+  max-width: 600px;
+  margin-left: 40px;
 }
 
-/* Sección de Nosotros */
-#about {
-    background-color: #ffe0b2;
-    padding: 3rem 1.5rem;
-    text-align: center;
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-#about h2 {
-    color: #ff7043;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+/* SERVICES SECTION */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
 }
 
-#about p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 1.5rem;
+.service {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.chat-bubble {
-    background-color: #ff6b6b;
-    color: #fff;
-    padding: 1rem;
-    width: fit-content;
-    margin: 1.5rem auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.service i {
+  font-size: 3rem;
+  color: #ff7b00;
 }
 
-.chat-bubble p {
-    margin: 0;
+.service h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
-/* Sección de Contacto */
-#contact {
-    background-color: #c5e1a5;
-    padding: 3rem 1.5rem;
-    text-align: center;
+.service p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-#contact h2 {
-    color: #7b9b4e;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+/* MAPA */
+.mapa iframe {
+  border-radius: 10px;
 }
 
-#contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
+/* CONTACT FORM */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-#contact label {
-    display: block;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+.contact-form button {
+  padding: 15px 30px;
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-#contact input, #contact textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    color: #555;
+.contact-form button:hover {
+  background-color: #ff5b00;
 }
 
-#contact button {
-    background-color: #ff6b6b;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
-}
-
-#contact button:hover {
-    background-color: #e64946;
-}
-
-/* Sección de Citas */
-#appointments {
-    background-color: #fff3e0;
-    padding: 3rem 1.5rem;
-    text-align: center;
-}
-
-#appointments h2 {
-    color: #ffb74d;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-#appointments p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
-}
-
-#appointments input {
-    padding: 1rem;
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-#appointments button {
-    background-color: #ff7043;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
-}
-
-#appointments button:hover {
-    background-color: #e64a19;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
-    background-color: #ffb3b3;
-    text-align: center;
-    padding: 1.5rem 0;
-    color: white;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-footer p {
-    font-size: 1rem;
-    margin: 0;
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
 }
